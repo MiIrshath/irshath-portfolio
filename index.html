@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Mohamed Irshath | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            color: #333;
+            text-align: center;
+            transition: background 0.5s ease-in-out;
+        }
+        .hidden {
+            display: none;
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        header {
+            background: #1565c0;
+            color: white;
+            padding: 30px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            background: #0d47a1;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        nav ul li button {
+            background: #64b5f6;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+        nav ul li button:hover {
+            background: #42a5f5;
+        }
+        section {
+            margin: 30px auto;
+            padding: 25px;
+            background: white;
+            color: black;
+            border-radius: 12px;
+            width: 60%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        section:hover {
+            transform: scale(1.02);
+        }
+        button {
+            background: #1976d2;
+            border: none;
+            color: white;
+            padding: 12px 18px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+        button:hover {
+            background: #1565c0;
+        }
+        #contact-info {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="#" onclick="toggleSection('home')" style="color: white; text-decoration: none;">Mohamed Irshath</a></h1>
+        
+        
+    <nav>
+        <ul>
+            <li><button onclick="toggleSection('skills')">Technical Skills</button></li>
+            <li><button onclick="toggleSection('education')">Education</button></li>
+            <li><button onclick="toggleSection('projects')">Projects</button></li>
+            <li><button onclick="toggleSection('contact')">Contact</button></li>
+        </ul>
+    </nav>
+    
+    <section id="skills" class="hidden fade-in">
+        <h2>Technical Skills</h2>
+        <p><strong>Programming Languages:</strong> Python, SQL, HTML, CSS</p>
+        <p><strong>Tools:</strong> Arduino IDE, Pandas</p>
+    </section>
+    
+    <section id="education" class="hidden fade-in">
+        <h2>Education</h2>
+        <p><strong>B.E. Computer Science & Engineering</strong> - Dr. Mahalingam College of Engineering and Technology (2021–2024) | CGPA: 7.5</p>
+        <p><strong>Diploma in Computer Engineering</strong> - SRM Polytechnic College (2018–2020) | Percentage: 79.25</p>
+    </section>
+    
+    <section id="projects" class="hidden fade-in">
+        <h2>Projects</h2>
+        <button onclick="showProject('reddit')">Reddit Sentiment Analysis for Ticker Prediction</button>
+        <button onclick="showProject('iot')">Gas Sensor Monitoring System Using IoT</button>
+        <div id="project-details" class="hidden"></div>
+    </section>
+    
+    <section id="contact" class="hidden fade-in">
+        <h2>Contact</h2>
+        <p>Phone: 8072220573</p>
+        <p>Email: mohamedirshathh@gmail.com</p>
+        <button class="social-button" onclick="window.open('https://www.linkedin.com/in/mohamed-irshath-m/', '_blank')">LinkedIn</button>
+        <button class="social-button" onclick="window.open('https://github.com/MiIrshath', '_blank')">GitHub</button>
+    
+        
+   
+       
+
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Mohamed Irshath. All rights reserved.</p>
+    </footer>
+</body>
+</html>
